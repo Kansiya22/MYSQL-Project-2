@@ -1,0 +1,25 @@
+create database Autonomous;
+create table Autonomous.students(
+student_id int primary key,
+student_name varchar(50),
+student_age int,
+student_major varchar(50)
+);
+insert into  Autonomous.students values
+(1,"kansiya",18,"Biology"),
+(2,"harini",15,"Maths_Biology"),
+(3,"sathya",20,"Computer science"),
+(4,"babyka",17,"Economics"),
+(5,"nila",19,"Computer science");
+
+select * from Autonomous.students;
+drop table Autonomous.students;
+
+SELECT * FROM Autonomous.students
+WHERE student_major LIKE "C%";
+
+SELECT max(student_age) from Autonomous.students;
+
+UPDATE Autonomous.students SET student_major="Computer science" WHERE student_id=1; 
+
+DELETE FROM Autonomous.students WHERE student_id=1;
